@@ -1,0 +1,37 @@
+﻿<html>
+    <head>
+        <title>Admin Login</title>
+        <link rel="stylesheet" href="AdminLogin.css">
+        <script>
+            function passvalues()
+            {
+                var username=document.getElementById("uname").value;
+                localStorage.setItem("textvalue1",username);
+                var password=document.getElementById("passwd").value;
+                localStorage.setItem("textvalue2",password);
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form action="userlogin_js.html">
+        <div class="login-box">
+            <h1>Login</h1>
+            <div class="text-box">
+                
+                <input type="text" placeholder="username" name="" value="">
+            </div>
+            <div class="text-box">
+                
+                <input type="password" placeholder="password" name="" value="">
+            </div>
+
+            <input class="btn" type="submit" name="" value="Log In" onclick="passvalues();"/>
+            <h>Create a new account?</h>
+            <button class="button button2"type="submit" formaction="Registration.html" name="signup">Sign Up</button>
+        </div>
+        </form>
+        
+    
+    </body>
+</html>

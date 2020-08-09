@@ -1,0 +1,79 @@
+﻿<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="AdminLogin.css">
+    <script>
+        function passvalues()
+        {
+            var Firstname=document.getElementById("fname").value;
+            localStorage.setItem("textvalue1",Firstname);
+            var Lastname=document.getElementById("lname").value;
+            localStorage.setItem("textvalue2",Lastname);
+            var username=document.getElementById("uname").value;
+            localStorage.setItem("textvalue3",username);
+            var password=document.getElementById("passwd").value;
+            localStorage.setItem("textvalue4",password);
+            var emailid=document.getElementById("em").value;
+            localStorage.setItem("textvalue6",emailid);
+            var gender=document.getElementById("rd").value;
+            localStorage.setItem("textvalue7",gender);
+            var mobileno=document.getElementById("mn").value;
+            localStorage.setItem("textvalue8",mobileno);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form action="Registration_js.html">
+        <div class="login-box">
+            <h1>Registration</h1>
+            <div class="text-box">
+                
+                <input type="text" placeholder="Firstname" name="" value="" id="fname">
+            </div>
+            <div class="text-box">
+                
+                <input type="text" placeholder="Lastname" name="" value="" id="lname">
+            </div>
+            <div class="text-box">
+                
+                <input type="text" placeholder="username" name="" value="" id="uname">
+            </div>
+
+            <div class="text-box">
+                
+                <input type="password" placeholder="password" name="" value="" id="passwd">
+            </div>
+            <div class="text-box">
+                
+                <input type="password" placeholder="Confirm password" name="" value="" id="cpasswd">
+            </div>
+
+            <div class="text-box">
+                <input type="email" placeholder="emailid" name="" value="" id="em">
+            </div>
+
+            <div>
+                <h>Gender:</h>
+                <input type="radio" name="Gender" value="Male" id="rd"/>Male
+                <input type="radio" name="Gender" value="Female" id="rd" />Female
+                <input type="radio" name="Gender" value="Other" id="rd" />Other
+            </div>
+
+            <div>
+                Mobile no:<input type="tel" name="mobile no:" id="mn"/>
+            </div>
+           <div>
+                <input type="checkbox" checked="checked" name="remember"  /> Remember me?
+           </div>
+
+            <div>
+                <input type="Reset">
+                <input type="submit" value="Login" onclick="passvalues();"/>
+            </div>
+        
+
+        </table>
+    </form>
+</body>
+</html>
