@@ -1,79 +1,67 @@
-﻿<html>
-<head>
-    <title>Registration</title>
-    <link rel="stylesheet" href="/css/AdminLogin.css">
-    <script>
-        function passvalues()
-        {
-            var Firstname=document.getElementById("fname").value;
-            localStorage.setItem("textvalue1",Firstname);
-            var Lastname=document.getElementById("lname").value;
-            localStorage.setItem("textvalue2",Lastname);
-            var username=document.getElementById("uname").value;
-            localStorage.setItem("textvalue3",username);
-            var password=document.getElementById("passwd").value;
-            localStorage.setItem("textvalue4",password);
-            var emailid=document.getElementById("em").value;
-            localStorage.setItem("textvalue6",emailid);
-            var gender=document.getElementById("rd").value;
-            localStorage.setItem("textvalue7",gender);
-            var mobileno=document.getElementById("mn").value;
-            localStorage.setItem("textvalue8",mobileno);
-            return false;
-        }
-    </script>
-</head>
-<body>
-    <form action="/js/Registration_js.html">
-        <div class="login-box">
-            <h1>Registration</h1>
-            <div class="text-box">
-                
-                <input type="text" placeholder="Firstname" name="" value="" id="fname">
-            </div>
-            <div class="text-box">
-                
-                <input type="text" placeholder="Lastname" name="" value="" id="lname">
-            </div>
-            <div class="text-box">
-                
-                <input type="text" placeholder="username" name="" value="" id="uname">
-            </div>
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/mtstyle.css">
+        <link rel="stylesheet" href="/css/fonts.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-lg-4 m-auto">
+                <div class="card mt-5 bg-dark">
+                    <div class="card-title text-center mt-3">
+                            <img src="/images/icon.jpg" width="150px" height="150px">
+                    </div>
+                    <div class="card-body">
+                            <form>
+                                <div class="form-grp mb-3">
+                                    <label for="firstname"></label>
+                                    <input type="text" class="form-control py-4" id="firstname" placeholder="First name" required>
+                                </div>
+                                <div class="form-grp mb-3">
+                                    <label for="lastname"></label>
+                                    <input type="text" class="form-control py-4" id="lastname" placeholder="Last name" required>
+                                </div>
+                                <div class="form-grp mb-3">
+                                    <label for="username"></label>
+                                    <input type="text" class="form-control py-4" id="username" placeholder="Username" required>
+                                </div>
+                                <div class="form-grp mb-3">
+                                    <label for="password"></label>
+                                    <input type="password" class="form-control py-4" id="password" placeholder="Password" required>
+                                </div>
+                                <div class="form-grp mb-3">
+                                    <label for="confirm-password"></label>
+                                    <input type="password" class="form-control py-4" id="confirm-password" placeholder="Confirm Password" required>
+                                </div>
+                                <div class="form-grp mb-3">
+                                    <label for="email"></label>
+                                    <input type="email" class="form-control py-4" id="email" placeholder="Email-id" required>
+                                </div>
+                                <div class="form-grp mb-3">
+                                    <label for="mobile-no"></label>
+                                    <input type="tel" class="form-control py-4" id="mobile-no" placeholder="mobile-no" required>
+                                </div>
 
-            <div class="text-box">
-                
-                <input type="password" placeholder="password" name="" value="" id="passwd">
-            </div>
-            <div class="text-box">
-                
-                <input type="password" placeholder="Confirm password" name="" value="" id="cpasswd">
-            </div>
+                                <div class="form-grp mb-3">
+                                    <label for="gender">Gender</label>
+                                    <div>
+                                        <label for="male" class="radio-inline"><input type="radio" name="gender" id="male"> male</label>
+                                        <label for="female" class="radio-inline"><input type="radio" name="gender" id="female"> female</label>
+                                        <label for="other" class="radio-inline"><input type="radio" name="gender" id="other"> other</label>
+                                    </div>
+                                </div>
 
-            <div class="text-box">
-                <input type="email" placeholder="emailid" name="" value="" id="em">
-            </div>
+                                <a href="/home.html" class="btn btn-success" role="button">Login</a>
 
-            <div>
-                <h>Gender:</h>
-                <input type="radio" name="Gender" value="Male" id="rd"/>Male
-                <input type="radio" name="Gender" value="Female" id="rd" />Female
-                <input type="radio" name="Gender" value="Other" id="rd" />Other
+                                <p class="float-right text-white"><input type="checkbox">Remember me?</p>
+                            </form>
+                    </div>
+                </div>
             </div>
-
-            <div>
-                Mobile no:<input type="tel" name="mobile no:" id="mn"/>
-            </div>
-           <div>
-                <input type="checkbox" checked="checked" name="remember"  /> Remember me?
-           </div>
-
-            <div>
-                <input type="Reset">
-                <input type="submit" value="Login" onclick="passvalues();"/>
-            </div>
-        
-
-        </table>
-    </form>
-</body>
+        </div>
+    </body>
 </html>
