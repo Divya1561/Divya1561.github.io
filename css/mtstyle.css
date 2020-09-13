@@ -1,0 +1,33 @@
+body
+{
+    background: url(/images/i2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    opacity: 0.9;
+}
+
+.card-body input
+{
+    font-size: 30px;
+}
+
+.card-body p
+{
+    font-size: 30px;
+}
+.panel-body p
+{
+    font-size: 30px;
+}
+
+.card-body a
+{
+    font-size: 30px;
+}
+
+.form-grp
+{
+    font-size: 30px;
+    color: white;
+}
