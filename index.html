@@ -2,13 +2,47 @@
     <head>
         <title>Hotel sunshine</title>
         <link rel="stylesheet" type="text/css" href="/css/index.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     </head>
 
-<body style="background-image: url(/images/i2.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; height: 100%;">
+<body>    
+    
+
+    <div class="slider">
+        <figure>
+            <img src="/images/i2.jpg">
+            <img src="/images/i3.jpg">
+            <img src="/images/i5.jpg">
+            
+        </figure>
+        <button class="btn-prev"><i class="fa fa-arrow-circle-left"></i></button>
+        <button class="btn-next"><i class="fa fa-arrow-circle-right"></i></button>
         
+    </div>
+
+        <!--jquery script-->
+    <script>
+        $(document).ready(function(){
+            x=0;
+            //for next slide
+            $('.btn-next').click(function(){
+                x=(x<=300)?(x+100):0;
+                $('figure').css('left', -x+"%");
+            });
+
+            //for prev slide
+            $('.btn-prev').click(function(){
+                x=(x>=100)?(x-100):400;
+                $('figure').css('left', -x+"%");
+            });
+        })
+    </script>
+    
     <div class="name">
         <h1>Welcome to Hotel Sunshine</h1>
     </div> 
+    
     <div class="dropdown">
         <button class="dropbtn">Login</button>
         <div class="dropdown-content">
@@ -16,6 +50,6 @@
           <a href="userlogin.html">User Login</a>
           
         </div>
-      </div>
+    </div>
 </body>
 </html>
